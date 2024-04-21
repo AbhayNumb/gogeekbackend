@@ -3,7 +3,7 @@ const User = require("../models/User");
 const sendToken = require("../utils/sendToken");
 const jwt = require("jsonwebtoken");
 const sendEmail = require("../utils/sendEmail");
-
+const ErrorHandler = require("../utils/errorhandler");
 exports.createUser = catchAsyncError(async (req, res, next) => {
   try {
     // Extracting data from request body
